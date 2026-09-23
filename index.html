@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A romantic, interactive love story website dedicated with all my heart.">
+  <title>To The Boy Who Owns My Heart ❤️ | Our Love Story</title>
+  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- Interactive Background Canvas (Stars, floating hearts, glowing bubbles) -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       1. LANDING PAGE OVERLAY (Opening Screen)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <div id="landing-screen">
+    <div class="landing-card">
+      <div class="landing-badge" id="landing-badge">A Special Surprise For You</div>
+      <h1 class="landing-title" id="landing-title">Hey Love ❤️</h1>
+      <p class="landing-subtitle" id="landing-subtitle">Something truly special is waiting for you...</p>
+      
+      <button class="btn-glow-heart" id="open-heart-btn" aria-label="Open My Heart">
+        <span class="btn-icon">💗</span>
+        <span id="landing-btn-text">Open My Heart 💗</span>
+      </button>
+
+      <p class="landing-footer" id="landing-footer">Made with all my love, just for you.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       FLOATING ROMANTIC MUSIC PLAYER WIDGET
+       ═══════════════════════════════════════════════════════════════════ -->
+  <aside id="floating-music-player" aria-label="Romantic Music Player">
+    <button class="music-toggle-btn" id="music-toggle-btn" aria-label="Play Music">
+      <span class="play-icon">🎵</span>
+    </button>
+    <div class="music-info">
+      <span class="music-title" id="music-track-title">Our Love Song</span>
+      <span class="music-artist" id="music-artist-name">Play Our Song ❤️</span>
+    </div>
+    <div class="music-equalizer" id="music-equalizer">
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+      <div class="eq-bar"></div>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       MAIN WEBSITE CONTENT
+       ═══════════════════════════════════════════════════════════════════ -->
+  <div id="app-wrapper">
+
+    <!-- ──────────────── HERO SECTION ──────────────── -->
+    <header class="section hero-section" id="hero">
+      <div class="hero-tag" id="hero-tag">To The One & Only</div>
+      <h1 class="hero-title" id="hero-heading">
+        To The Boy Who Owns <span class="highlight">My Heart</span> ❤️
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        "Every love story is beautiful, but ours is my favourite."
+      </p>
+      <a href="#reasons-section" class="btn-glow-heart hero-btn" id="hero-cta">
+        <span class="btn-icon">💕</span>
+        <span>Continue Our Story 💕</span>
+      </a>
+    </header>
+
+    <!-- ──────────────── SECTION 1: WHY I LOVE YOU ──────────────── -->
+    <section class="section" id="reasons-section">
+      <header class="section-header">
+        <span class="section-badge">From The Depths Of My Soul</span>
+        <h2 class="section-title">Why I Love You ❤️</h2>
+        <p class="section-subtitle">Click on any card to read a personal little note just for you.</p>
+      </header>
+
+      <div class="reasons-grid" id="reasons-container">
+        <!-- Rendered dynamically via js/main.js from js/config.js -->
+      </div>
+    </section>
+
+    <!-- ──────────────── SECTION 2: OUR LITTLE STORY ──────────────── -->
+    <section class="section" id="story-section">
+      <header class="section-header">
+        <span class="section-badge">Milestones of Us</span>
+        <h2 class="section-title">Our Little Story 📖</h2>
+        <p class="section-subtitle">Every step that brought our hearts closer together.</p>
+      </header>
+
+      <div class="timeline-container" id="timeline-container">
+        <!-- Rendered dynamically via js/main.js from js/config.js -->
+      </div>
+    </section>
+
+    <!-- ──────────────── SECTION 3: PHOTO MEMORY WALL ──────────────── -->
+    <section class="section" id="photos-section">
+      <header class="section-header">
+        <span class="section-badge">Frozen In Time</span>
+        <h2 class="section-title">Photo Memory Wall 📸</h2>
+        <p class="section-subtitle">Snapshots of moments I will treasure forever. Tap any photo to enlarge.</p>
+      </header>
+
+      <div class="polaroid-grid" id="polaroids-container">
+        <!-- Rendered dynamically via js/main.js from js/config.js -->
+      </div>
+    </section>
+
+    <!-- ──────────────── SECTION 4: ROMANTIC SURPRISE POPUPS ──────────────── -->
+    <section class="section" id="popups-section">
+      <header class="section-header">
+        <span class="section-badge">Little Sweet Whispers</span>
+        <h2 class="section-title">Surprise Love Notes 💌</h2>
+        <p class="section-subtitle">Secrets and sweet truths meant only for your eyes.</p>
+      </header>
+
+      <div class="secrets-grid" id="secrets-container">
+        <!-- Rendered dynamically via js/main.js from js/config.js -->
+      </div>
+    </section>
+
+    <!-- ──────────────── SECTION 5: "OPEN WHEN..." ENVELOPES ──────────────── -->
+    <section class="section" id="envelopes-section">
+      <header class="section-header">
+        <span class="section-badge">For Whenever You Need Me</span>
+        <h2 class="section-title">"Open When..." 💌</h2>
+        <p class="section-subtitle">Pick an envelope whenever your heart feels like it.</p>
+      </header>
+
+      <div class="envelopes-grid" id="envelopes-container">
+        <!-- Rendered dynamically via js/main.js from js/config.js -->
+      </div>
+    </section>
+
+    <!-- ──────────────── SECTION 6: REASONS I CHOOSE YOU ──────────────── -->
+    <section class="section" id="stats-section">
+      <header class="section-header">
+        <span class="section-badge">By The Numbers</span>
+        <h2 class="section-title">Reasons I Choose You ❤️</h2>
+        <p class="section-subtitle">No matter how many times I count, the answer is always you.</p>
+      </header>
+
+      <div class="stats-grid" id="stats-container">
+        <!-- Rendered dynamically via js/main.js from js/config.js -->
+      </div>
+    </section>
+
+    <!-- ──────────────── SECTION 7: INTERACTIVE LOVE MINI GAME ──────────────── -->
+    <section class="section" id="game-section">
+      <div class="game-card">
+        <span class="game-badge">Cute Mini Interaction 🎮❤️</span>
+        <h2 class="game-question" id="game-question">How much do you think I love you?</h2>
+        
+        <div class="game-options" id="game-options-container">
+          <!-- Rendered dynamically via js/main.js from js/config.js -->
+        </div>
+
+        <div class="game-response-box" id="game-response-box">
+          <p class="game-feedback" id="game-feedback"></p>
+          <p class="game-grand-reveal" id="game-grand-reveal" style="display: none;"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────── SECTION 8: LETTER FROM MY HEART ──────────────── -->
+    <section class="section" id="letter-section">
+      <header class="section-header">
+        <span class="section-badge">A Written Vow</span>
+        <h2 class="section-title">A Message From My Heart 💌</h2>
+        <p class="section-subtitle">Words written with every beat of my heart.</p>
+      </header>
+
+      <article class="letter-parchment" id="letter-parchment">
+        <div class="wax-seal">❤️</div>
+        <h3 class="letter-salutation" id="letter-salutation">Dear You...</h3>
+        <div class="letter-body" id="letter-body">
+          <!-- Paragraphs revealed with smooth typewriter / fade -->
+        </div>
+        <div class="letter-signoff">
+          <span id="letter-closing">Forever yours,</span><br>
+          <span id="letter-signature">With All My Love ❤️</span>
+        </div>
+        <div class="letter-actions">
+          <button class="btn-glow-heart" id="replay-letter-btn">
+            <span>Read It Again ❤️</span>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- ──────────────── SECTION 9: FINAL SURPRISE CLIMAX ──────────────── -->
+    <section class="section final-section" id="final-section">
+      <p class="final-prelude" id="final-prelude">Before you leave...</p>
+      
+      <div class="final-lines-container" id="final-lines-container">
+        <!-- Line-by-line reveal -->
+      </div>
+
+      <div class="big-pulse-heart" id="big-pulse-heart" title="Click for a heart burst!">💖</div>
+
+      <button class="btn-glow-heart" id="final-surprise-btn">
+        <span class="btn-icon">💗</span>
+        <span id="final-btn-text">One Last Surprise 💗</span>
+      </button>
+    </section>
+
+    <!-- ──────────────── SITE FOOTER ──────────────── -->
+    <footer class="site-footer">
+      <p class="footer-love-text" id="footer-custom-names">Forever & Always ❤️</p>
+      <p class="footer-copy">Crafted with endless love, romantic dreams & stardust.</p>
+    </footer>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       REUSABLE MODAL DIALOGS
+       ═══════════════════════════════════════════════════════════════════ -->
+  <!-- General Message Modal (Reasons, Popups, Envelopes) -->
+  <div class="modal-overlay" id="general-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-icon" id="modal-icon">💌</div>
+      <h3 class="modal-title" id="modal-title">Special Note</h3>
+      <p class="modal-body" id="modal-body">Modal message content goes here.</p>
+      <div class="modal-footer-text" id="modal-footer-text">Forever Yours ❤️</div>
+    </div>
+  </div>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="modal-overlay" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="lightbox-close-btn" aria-label="Close image">✕</button>
+      <div class="lightbox-img-wrapper">
+        <img src="" alt="Memory Photo" id="lightbox-img" class="lightbox-img">
+      </div>
+      <h3 class="modal-title" id="lightbox-title">Photo Caption</h3>
+      <p class="modal-body" id="lightbox-note">A sweet memory of us.</p>
+      <div class="modal-footer-text" id="lightbox-date">Always in my heart</div>
+    </div>
+  </div>
+
+  <!-- Final Grand Surprise Celebration Modal -->
+  <div class="modal-overlay" id="celebration-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="celebration-close-btn" aria-label="Close">✕</button>
+      <div class="modal-icon">🎆💖</div>
+      <h3 class="modal-title" id="celebration-heading">Happy Us ❤️</h3>
+      <p class="modal-body" id="celebration-body" style="white-space: pre-line;">
+        I love you more than words can explain.
+      </p>
+      <div class="modal-footer-text" id="celebration-signoff">Forever yours, ❤️</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       JAVASCRIPT SCRIPTS
+       ═══════════════════════════════════════════════════════════════════ -->
+  <script src="js/config.js"></script>
+  <script src="js/canvas-effects.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
